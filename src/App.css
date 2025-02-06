@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,5 +35,15 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.app {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .app {
+    font-size: 14px;
   }
 }

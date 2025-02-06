@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: linear-gradient(120deg, #0f2027, black);
+}
+
+/* Title Animation */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: gray;
+  color: white;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+/* Feedback Colors */
+.cell.correct {
+  background: green;
+  animation: bounce 0.5s ease-in-out;
+}
+
+.cell.present {
+  background: yellow;
+  color: black;
+}
+
+.cell.absent {
+  background: #444;
+}
+
+/* Button Styles */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  background: #ffcc00;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
